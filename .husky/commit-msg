@@ -1,0 +1,5 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# 校验commit信息
+npx commitlint -e $HUSKY_GIT_PARAMS
