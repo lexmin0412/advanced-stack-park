@@ -5,6 +5,7 @@ a repository built with absolutely advanced stack includes pnpm6, react18, vite2
 | item        | version |
 |-------------|---------|
 | react       | 18.0.0  |
+| react-dom   | 6.3.0   |
 | vite        | 2.9.5   |
 | typescript  | 4.6.3   |
 | tailwindcss | 3.0.24  |
