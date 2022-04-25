@@ -30,8 +30,7 @@ export default function Toolbar() {
 					type="search"
 					placeholder='请输入关键词，回车键搜索'
 					className='block w-60 border-sky-500 rounded-md border-2 text-base ml-4 px-2 outline-none'
-					onKeyDown={(e) => {
-						console.log(e)
+					onKeyDown={(e: any) => {
 						if (e.keyCode === 13) {
 							handleSearch(e.target.value)
 						}
