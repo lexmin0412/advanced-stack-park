@@ -1,4 +1,4 @@
-import { Component, useState, useEffect, useRef } from 'react'
+import { useState, useEffect } from 'react'
 import { getCurFormattedTime } from './../../utils/index'
 
 export function TimeMachine() {
@@ -17,7 +17,7 @@ export function TimeMachine() {
 	return (
 		<div className='flex justify-center align-middle flex-col w-screen h-screen'>
 			<div className="title text-4xl text-center font-bold">
-				time machine
+				Time Machine
 			</div>
 			<div className="machine-time text-2xl text-center my-5">
 				{time}
