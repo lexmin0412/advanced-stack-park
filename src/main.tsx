@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
 		<BrowserRouter basename=''>
 			<Routes>
-				<Route path="/" element={<App />} />
+				<Route path="/" element={<Toolbar />} />
 				<Route path="/time-machine" element={<TimeMachine/>} />
 				<Route path="/toolbar" element={<Toolbar/>} />
 			</Routes>
