@@ -7,3 +7,15 @@ import dayjs from 'dayjs'
 export const getCurFormattedTime = (timestamp?: number) => {
 	return (dayjs(timestamp || new Date())).format('YYYY-MM-DD HH:mm:ss')
 }
+
+/**
+ * 根据key获取localStorage中的数据并parse
+ * @param key 键
+ */
+export const getStorageSync = (key: string, defaultValue?: any): any => {
+	const value = localStorage.getItem(key)
+	if ( value ) {
+		return JSON.parse(value)
+	}
+	return defaultValue
+}
