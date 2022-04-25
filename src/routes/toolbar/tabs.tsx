@@ -8,7 +8,7 @@ export interface TabType {
 	title: ToolAuthType
 }
 
-export const tabs = [
+export const tabs: TabType[] = [
 	{
 		id: 'public',
 		title: 'public',
