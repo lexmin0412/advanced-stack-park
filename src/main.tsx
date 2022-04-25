@@ -8,11 +8,12 @@ import Toolbar from './routes/toolbar'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-		<BrowserRouter basename=''>
+		<BrowserRouter basename='advanced-stack-park'>
 			<Routes>
 				<Route path="/" element={<Toolbar />} />
 				<Route path="/time-machine" element={<TimeMachine/>} />
-				<Route path="/toolbar" element={<Toolbar/>} />
+				<Route path="/toolbar" element={<Toolbar />} />
+				<Route path="/console" element={<App />} />
 			</Routes>
 		</BrowserRouter>
   </React.StrictMode>
