@@ -15,6 +15,11 @@ function App() {
 				>
 					Time Machine
 				</Link>
+				<Link to="/toolbar"
+					className='text-3xl font-bold underline'
+				>
+					Toolbar
+				</Link>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
