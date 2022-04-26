@@ -16,9 +16,9 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "6"
   },
-	"engines": {
-		"node": ">=14"
-	},
+  "engines": {
+    "node": ">=14"
+  },
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
