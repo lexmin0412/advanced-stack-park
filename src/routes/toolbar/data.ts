@@ -62,6 +62,27 @@ export const toolbars = [
 		title: '掘金',
 		desc: '开发者交流社区',
 		link: 'https://juejin.cn/',
-	}
+	},
+	{
+		icon: '',
+		id: 'taro',
+		title: 'Taro 文档',
+		desc: 'Taro 官方文档',
+		link: 'https://taro-docs.jd.com/taro/docs/',
+	},
+	{
+		icon: '',
+		id: 'baidu',
+		title: '百度',
+		desc: '百度一下，你就知道',
+		link: 'https://baidu.com',
+	},
+	{
+		icon: 'https://cn.vitejs.dev/logo.svg',
+		id: 'vite',
+		title: 'vite 中文文档',
+		desc: 'vite 官方中文文档',
+		link: 'https://cn.vitejs.dev/',
+	},
 	//
 ]
