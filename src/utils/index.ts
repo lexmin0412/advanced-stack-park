@@ -19,3 +19,7 @@ export const getStorageSync = (key: string, defaultValue?: any): any => {
 	}
 	return defaultValue
 }
+
+export const setStorageSync = (key: string, value: any) => {
+	localStorage.setItem(key, JSON.stringify(value))
+}

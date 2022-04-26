@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
 import { toolbars, ToolType } from './data'
 import { tabs, ToolAuthType, TOOL_AUTH_PUBLIC } from './tabs'
-import { getStorageSync } from './../../utils/index'
+import { getStorageSync, setStorageSync } from './../../utils/index'
+import { useSearchParams } from 'react-router-dom'
 
 export default function Toolbar() {
 
@@ -30,7 +31,17 @@ export default function Toolbar() {
 		setSearchRes(searchResult)
 	}
 
+	const [searchParams] = useSearchParams()
+
 	useEffect(() => {
+		document.title = 'Toolbar'
+
+		// 判断如果url上携带了token则存到localStorage
+		const token = searchParams.get('token')
+		if ( token ) {
+			setStorageSync('token', token)
+		}
+
 		handleSearch(searchKeyword)
 	}, [])
 
@@ -42,21 +53,32 @@ export default function Toolbar() {
 		setCurrentTab(id)
 	}
 
+	const handleGithubAuth = () => {
+		window.location.href = `https://github.com/login/oauth/authorize?client_id=bd933196d64a49c70a82&redirect_uri=https://api.cellerchan.top/github/oauth/redirect`
+	}
+
 	return (
 		<div className='px-8 py-4'>
 			<div className="text-2xl font-bold mb-4 flex">
-				<div>Toolbar</div>
-				<input
-					type="search"
-					placeholder='请输入关键词，回车键搜索'
-					className='block w-60 border-sky-500 rounded-md border-2 text-base ml-4 px-2 outline-none'
-					onChange={(e)=>handleChange(e.target.value)}
-					onKeyDown={(e: any) => {
-						if (e.keyCode === 13) {
-							handleSearch(e.target.value)
-						}
-					}}
-				/>
+				<div className='flex flex-grow overflow-hidden pr-4'>
+					{/* <div>Toolbar</div> */}
+					<input
+						type="text"
+						placeholder='请输入关键词'
+						className='block border-sky-500 rounded-md border-2 text-base px-2 outline-none h-8 flex-grow'
+						onChange={(e) => handleChange(e.target.value)}
+						onKeyDown={(e: any) => {
+							if (e.keyCode === 13) {
+								handleSearch(e.target.value)
+							}
+						}}
+					/>
+				</div>
+				<div className="login-box text-xl cursor-pointer"
+					onClick={handleGithubAuth}
+				>
+					登录
+				</div>
 			</div>
 			<div className="flex">
 					{
