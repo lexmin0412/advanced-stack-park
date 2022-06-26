@@ -8,13 +8,13 @@ a repository built with absolutely advanced stack includes pnpm6, react18, vite2
 
 | item        | version |
 |-------------|---------|
-| react       | 18.0.0  |
-| react-dom   | 6.3.0   |
-| vite        | 2.9.5   |
-| vitest      | 0.9.4   |
-| typescript  | 4.6.3   |
-| tailwindcss | 3.0.24  |
-| pnpm        | 6.11.5  |
+| react       | 18.2.0  |
+| react-router   | 6.3.0   |
+| vite        | 2.9.12   |
+| vitest      | 0.16.0   |
+| typescript  | 4.7.4   |
+| tailwindcss | 3.1.4  |
+| pnpm        | 7.3.0  |
 | husky       | 7.0.4   |
 
 
