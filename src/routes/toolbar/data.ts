@@ -90,6 +90,12 @@ export const toolbars = [
 		title: 'react 官方文档',
 		desc: 'react 官方文档',
 		link: 'https://reactjs.org/'
+	},
+	{
+		icon: 'https://cn.vitejs.dev/logo.svg',
+		id: 'vitepress',
+		title: 'vitepress 官方文档',
+		desc: 'vitepress 官方文档',
+		link: 'https://vitepress.vuejs.org/'
 	}
-	//
 ]
