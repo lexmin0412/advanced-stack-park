@@ -97,5 +97,12 @@ export const toolbars = [
 		title: 'vitepress 官方文档',
 		desc: 'vitepress 官方文档',
 		link: 'https://vitepress.vuejs.org/'
+	},
+	{
+		icon: 'https://vitest.dev/logo-shadow.svg',
+		id: 'vitest',
+		title: 'vitest 官方文档',
+		desc: 'vitest 官方文档',
+		link: 'https://vitest.dev'
 	}
 ]
