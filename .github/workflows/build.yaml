@@ -24,3 +24,13 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist
+
+    - name: Capture Website
+      run: |
+        git config --global user.email ${{secrets.USER_EMAIL}}
+        git config --global user.name ${{secrets.USER_NAME}}
+        npm run capture-website
+        git add .
+        git commit -m \'chore\:\ update website image\'
+        git push
+
