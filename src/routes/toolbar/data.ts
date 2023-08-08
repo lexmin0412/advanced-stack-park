@@ -68,7 +68,7 @@ export const toolbars = [
 		id: 'taro',
 		title: 'Taro 文档',
 		desc: 'Taro 官方文档',
-		link: 'https://taro-docs.jd.com/taro/docs/',
+		link: 'https://taro-docs.jd.com/docs/',
 	},
 	{
 		icon: '',
